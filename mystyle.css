@@ -1,8 +1,5 @@
 body{
     background-color: bisque;
-    width: 92%;
-    padding-left: 4%;
-    height: 100%;
 }
 
 .div0{
@@ -24,6 +21,7 @@ body{
 
 .div1 p img{
     margin-right: 50px;
+    margin-left:50px ;
     border-radius: 25px;
     float: right;
     width: 320px;
@@ -39,7 +37,7 @@ table{
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
     border-spacing: 5px;
-    width: 50%;
+    width: 60%;
 }
 
 tr{
@@ -91,4 +89,10 @@ tr{
 
  }
 
+
+ 
+.hidden_table .edu ,.work , .skills, .p_course, .project, .management, .Dependants{
+    display: inherit;
+    
+}
 
