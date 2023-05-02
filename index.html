@@ -14,7 +14,7 @@
         
     </div>
     <div class="div1">
-        <h2>This is my resume</h2>
+        <h2 style="font-family:Arial, Helvetica, sans-serif; font-weight: bold;">All information to be shown at this page are true about me.</h2>
         <p><img src="PXL_20220502_094629081.PORTRAIT.jpg">
             <table>
                 <tr>
@@ -50,18 +50,21 @@
         </p>
     </div>
     <div class="div2">
-        <button class="btn" id="btn1">Education background</button>
-        <button class="btn" id="btn2">Work Experience</button>
-        <button class="btn" id="btn3">Skills</button>
-        <button class="btn" id="btn4">Proffession Course</button>
-        <button class="btn" id="btn5">Projects</button>
-        <button class="btn" id="btn6">Management Experience</button>
-        <button class="btn" id="btn7">Dependants</button>
+        <button class="btn" id="btn1" onclick="javascript:showtable1()">Education background</button>
+        <button class="btn" id="btn2" onclick="javascript:showtable2()">Work Experience</button>
+        <button class="btn" id="btn3" onclick="javascript:showtable3()">Skills</button>
+        <button class="btn" id="btn4" onclick="javascript:showtable4()">Proffession Course</button>
+        <button class="btn" id="btn5" onclick="javascript:showtable5()">Projects</button>
+        <button class="btn" id="btn6" onclick="javascript:showtable6()">Management Experience</button>
+        <button class="btn" id="btn7" onclick="javascript:showtable7()">Dependants</button>
 
-        <div class="hidden_table">
             <table class="edu" id="edu">
                 <tr>
+                    <th colspan="4"><button class="closebtn" id="closebtn" onclick="javascript:closetable()">Close</button></th>
+                </tr>
+                <tr>
                     <th colspan="4" style="background-color: darkcyan; font-size: x-large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Education Background</th>
+        
                 </tr>
                 <tr>
                     <th>Year </th>
@@ -98,6 +101,9 @@
 
             <table class="work" id="work">
                 <tr>
+                    <th colspan="3"><button class="closebtn" id="closebtn" onclick="javascript:closetable()">Close</button></th>
+                </tr>
+                <tr>
                     <th colspan="3" style="background-color: darkcyan; font-size: x-large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Work Experience</th>
                 </tr>
                 <tr>
@@ -119,6 +125,9 @@
 
             <table class="skills" id="skills">
                 <tr>
+                    <th><button class="closebtn" id="closebtn" onclick="javascript:closetable()">Close</button></th>
+                </tr>
+                <tr>
                     <th style="background-color: darkcyan; font-size: x-large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">My Skills</th>
                 </tr>
                 <tr>
@@ -135,6 +144,9 @@
             </table>
 
             <table class="p_course" id="p_course">
+                <tr>
+                    <th colspan="2"><button class="closebtn" id="closebtn" onclick="javascript:closetable()">Close</button></th>
+                </tr>
                 <tr>
                     <th colspan="2" style="background-color: darkcyan; font-size: x-large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Proffession capabilities</th>
                 </tr>
@@ -166,6 +178,9 @@
 
             <table class="project" id="project">
                 <tr>
+                    <th colspan="5"><button class="closebtn" id="closebtn" onclick="javascript:closetable()">Close</button></th>
+                </tr>
+                <tr>
                     <th colspan="5" style="background-color: darkcyan; font-size: x-large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Projects done</th>
                 </tr>
                 <tr>
@@ -193,6 +208,9 @@
 
             <table class="management" id="management">
                 <tr>
+                    <th colspan="3"><button class="closebtn" id="closebtn" onclick="javascript:closetable()">Close</button></th>
+                </tr>
+                <tr>
                     <th colspan="3" style="background-color: darkcyan; font-size: x-large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Management Experience</th>
                 </tr>
                 <tr>
@@ -218,6 +236,9 @@
             </table>
 
             <table class="Dependants" id="Dependants">
+                <tr>
+                    <th colspan="3"><button class="closebtn" id="closebtn" onclick="javascript:closetable()">Close</button></th>
+                </tr>
                 <tr>
                     <th colspan="3" style="background-color: darkcyan; font-size: x-large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Dependants</th>
                 </tr>
@@ -248,12 +269,11 @@
                     </td>
                 </tr>
             </table>
-        </div>
         
     </div>
     <div class="div3">
         <marquee>For more information or interest,press the link below to contact me</marquee>
-        <button id="contactbtn">Contact me</button>
+        <a href="contact.html"><button id="contactbtn">Contact me</button></a>
     </div>
     
 </body>
