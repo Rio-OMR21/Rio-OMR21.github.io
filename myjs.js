@@ -94,3 +94,51 @@ function closetable() {
 }
 
 
+
+
+        const contactform = document.getElementById("contactform");
+        const name = document.getElementById("#name");
+        const email = document.getElementById("#email");
+        const phone = document.getElementById("#phone");
+        const comment = document.getElementById("#comment");
+        const savebtn = document.getElementById("#savebtn");
+        const contactinfo = document.getElementById("#contactinfo");
+        
+        let contactstorage = localStorage.getItem("contactinfo") ? JSON.parse(localStorage.getItem("contactinfo")) : [];
+        
+        contactform.addEventListener("submit", (e) => {
+            e.preventDefault();
+            contactstorage.push(name.value);
+            contactstorage.push(email.value);
+            contactstorage.push(phone.value);
+            contactstorage.push(comment.value);
+            localStorage.setItem("contactinfo", JSON.stringify(contactstorage));
+            listBuilder(name.value);
+            listBuilder(email.value);
+            listBuilder(phone.value);
+            listBuilder(comment.value);
+            name.value = " ";
+            email.value = " ";
+            phone.value = " ";
+            comment.value = " ";
+        });
+        
+        const listBuilder = (text) => {
+            const contact = document.getElement("li");
+            contact.innerHTML = text + '<button onclick="deletecontact(this)">X</button>';
+            contactinfo.appendChild(contact);
+        };
+        
+        const getcontact = JSON.parse(localStorage.getItem("contactinfo"));
+        getcontact.forEach((contact) => {
+            listBuilder(contact);
+        });
+        
+        const deletecontact = (btn) => {
+            let el = btn.parentNode;
+            const index = [...el.parentElement.children].indexOf(el);
+            contactstorage.splice(index, 1);
+            localStorage.setItem("contactinfo", JSON.stringify(contactstorage));
+            el.remove();
+        };
+    

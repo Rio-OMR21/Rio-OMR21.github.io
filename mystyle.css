@@ -20,7 +20,6 @@ body{
 }
 
 .div1 p img{
-    margin-right: 50px;
     margin-left:50px ;
     border-radius: 25px;
     float: right;
@@ -37,7 +36,8 @@ table{
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
     border-spacing: 5px;
-    width: 60%;
+    width: auto;
+    overflow-x:auto;
 }
 
 tr{
@@ -107,10 +107,10 @@ tr{
 }
 
 .div4c{
-    margin: 0.1px;
+    margin: auto;
     background-image: linear-gradient(to top right,cadetblue, darkcyan, cyan);
     padding-top: 10px;
-    height: 700px;
+    height: 780px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: x-large;
@@ -118,78 +118,72 @@ tr{
 }
 
 .div4{
-    margin: 0.1px;
+    margin: auto;
     background-image: linear-gradient(to top right,cadetblue, darkcyan, cyan);
-    height: 850px;
+    height: 650px;
     font-family: Arial, Helvetica, sans-serif;
 
 }
 
-.form{
-    width: 800px;
-    font-size: medium;
-    margin-left: 220px;
-
-
-}
 
 .input{
-    width: 600px;
-    height: 30px;
+    width: 50%;
+    height: 35px;
     border-radius: 5px;
     margin: 5px;
     border-style: hidden;
     
 }
 .commentbox{
-    width: 600px;
+    width: 50%;
     height: 100px;
     border-radius: 5px;
     margin: 5px;
     border-style: hidden;   
 }
 
-#themap{
-    width: 800px;
-    height: 600px;
-}
-iframe{
-    height: 450px;
-    width: 1000px;
-    margin: 100px;
-    scroll-margin: none;
+#map{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: auto;
+    overflow-x: auto;
+    overflow-y: auto;
+    height: auto;
+    
 }
 
+
 .div5{
-    margin: 300px;
     background-image: linear-gradient(to top right,cadetblue, darkcyan, cyan);
     padding-top: 10px;
     height: 200px;
     font-family: Arial, Helvetica, sans-serif;
     text-indent: 2cm;
     margin-top: 0.1px;
-    border-radius: 5px;
+    border-radius: 50px;
    
 }
 .login{
-    margin: 60px;
+    margin: auto;
     background-image: linear-gradient(to top right,cadetblue, darkcyan, cyan);
     padding-top: 10px;
-    height: 700px;
+    height: auto;
     font-family: Arial, Helvetica, sans-serif;
-    text-align: left;
     font-size: x-large;
+    text-align: center;
+    border-radius: 15px;
+    
 }
 
-.lbdn{
-    margin-left: 100px;
-}
 
 #submit{
     background-image: linear-gradient(blue,lightgreen);
-    width: 250px;
+    width: 100px;
     height: 60px;
-    margin-left: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     border-radius: 15px;
 }
 
@@ -199,8 +193,9 @@ iframe{
     height: 70px;
     border-radius: 10px;
     font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
     color: whitesmoke;
 
 }
+
