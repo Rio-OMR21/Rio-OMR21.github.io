@@ -96,7 +96,7 @@ function closetable() {
 
 
 
-        const contactform = document.getElementById("contactform");
+ /*       const contactform = document.getElementById("contactform");
         const name = document.getElementById("#name");
         const email = document.getElementById("#email");
         const phone = document.getElementById("#phone");
@@ -140,5 +140,7 @@ function closetable() {
             contactstorage.splice(index, 1);
             localStorage.setItem("contactinfo", JSON.stringify(contactstorage));
             el.remove();
-        };
-    
+        };*/
+
+        
+ 

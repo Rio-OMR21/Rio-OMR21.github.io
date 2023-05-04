@@ -6,7 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
     <link rel="stylesheet" href="mystyle.css">
-    <script src="myjs.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+
+            const Login = document.querySelector("#submit");
+            Login.onclick = (e)=> {
+            e.preventDefault();
+        
+            const loginname = document.getElementById("logname").value;
+            const loginemail = document.getElementById("logemail").value;
+        
+            const logname =localStorage.getItem("name");
+            const logemail =localStorage.getItem("email");
+        
+            if(loginname == "" && loginemail == ""){
+                alert("Fill in your credentials please");
+        
+            }
+            else{
+                if(loginname == logname && loginemail == logemail){
+                    alert("Log in Successful");
+                    window.location.href = "index.html";
+                }
+                else{
+                    alert("Something went wrong");
+                }
+            }
+            
+        }
+        
+        });
+    </script>
 </head>
 <body>
         <div class="login">
@@ -15,23 +45,10 @@
            <label id="error" style="color: rgb(232, 130, 13);"></label>
            
            <form id="logform" class="form">
-            <input class="input" type="text" id="name" required="" placeholder="Enter Name"><br><br>
-            <input class="input" type="email" id="email" required="" placeholder="Enter Email"><br><br>
-            <input class="input" type="submit" id="submit" value="LOGIN">
+            <input class="input" type="text" id="logname" required="" placeholder="Enter Name"><br><br>
+            <input class="input" type="email" id="logemail" required="" placeholder="Enter Email"><br><br>
+            <input class="login" type="submit" id="submit" value="LOG-IN">
            </form>
-           <br>
-
-           
-
-           </ul>
-
-           <!--<label class="lbdn" for="">Name: <span id="name2"></span></label><br>
-           <br>
-           <label class="lbdn" for="">Email: <span id="email2"></span></label><br>
-           <br>
-           <label class="lbdn" for="">Phone number: <span id="phone"></span></label><br>
-           <br>
-           <label class="lbdn" for="">Comments: <span id="comment"></span></label>-->
         </div>
 </body>
 </html>
